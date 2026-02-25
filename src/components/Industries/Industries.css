@@ -1,0 +1,285 @@
+/* =========================
+   INDUSTRIES SECTION
+   ========================= */
+.industries {
+    width: 100%;
+    background: #ffffff;
+    padding: 90px 0;
+}
+
+.industries-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+/* Label */
+.industries-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 18px;
+}
+
+.industries-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #1db954;
+}
+
+.industries-label-text {
+    font-family: "Poppins", sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #1db954;
+}
+
+/* Title */
+.industries-title {
+    font-family: "Poppins", sans-serif;
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 1.35;
+    color: #1a202c;
+    max-width: 760px;
+    margin: 0 auto 60px;
+}
+
+/* =========================
+   4-ROW GRID (each row aligns with 1-4)
+   ========================= */
+.industries-rows {
+    display: flex;
+    flex-direction: column;
+    gap: 55px;
+    /* equal spacing between 1,2,3,4 rows */
+}
+
+/* Each row: left | divider | right */
+.industries-row {
+    display: grid;
+    grid-template-columns: 1fr 90px 1fr;
+    gap: 40px;
+    align-items: stretch;
+    /* (removed duplicate align-items) */
+    text-align: left;
+}
+
+/* Cells */
+.industries-cell {
+    min-height: 170px;
+    /* keeps rows stable */
+}
+
+/* =========================
+   INDUSTRY SPLIT (image + text)
+   ========================= */
+.industry-split {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 18px;
+    align-items: center;
+}
+
+.industry-split-reverse {
+    grid-template-columns: 1fr 280px;
+}
+
+/* Image (template-ish size) */
+.industry-image {
+    width: 280px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 18px;
+    box-shadow: 0 10px 22px rgba(0, 0, 0, 0.1);
+}
+
+/* Text */
+.industry-text {
+    max-width: 320px;
+}
+
+.industry-name {
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: #1a202c;
+    margin: 0 0 8px;
+}
+
+.industry-desc {
+    font-family: "Poppins", sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    color: rgba(26, 32, 44, 0.75);
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* =========================
+   DIVIDER (FORCE VISIBLE)
+   ========================= */
+.industries-divider {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /* IMPORTANT: divider must have height */
+    height: 100%;
+    min-height: 170px;
+}
+
+/* The actual divider line (absolute so it ALWAYS shows) */
+.divider-line {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    /* stretches full height */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1px;
+
+    background: rgba(26, 32, 44, 0.35);
+    /* visible gray */
+    border-radius: 1px;
+    z-index: 1;
+}
+
+/* Last row line fades at the bottom (more specific so it ALWAYS overrides) */
+.divider-line.divider-line-fade {
+    background: linear-gradient(to bottom,
+            rgba(26, 32, 44, 0.35) 0%,
+            rgba(26, 32, 44, 0.35) 60%,
+            rgba(26, 32, 44, 0) 100%);
+}
+
+/* Number badge stays on top */
+.divider-badge {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: #1db954;
+    color: #ffffff;
+
+    font-family: "Poppins", sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    z-index: 2;
+    /* above divider line */
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
+}
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+@media (max-width: 960px) {
+
+    .industries-title {
+        font-size: 24px;
+    }
+
+    /* Fully stack rows */
+    .industries-row {
+        display: block;
+    }
+
+    /* Remove divider completely */
+    .industries-divider {
+        display: none;
+    }
+
+    .divider-line,
+    .divider-badge {
+        display: none;
+    }
+
+    /* Remove empty layout cells */
+    .industries-left,
+    .industries-right {
+        width: 100%;
+    }
+
+    .industries-left:empty,
+    .industries-right:empty {
+        display: none;
+    }
+
+    /* Industry block wrapper */
+    .industry-block {
+        position: relative;
+    }
+
+    /* Stack image then text for ALL rows */
+    .industry-split,
+    .industry-split-reverse {
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+    }
+
+    /* Force image always first */
+    .industry-split-reverse .industry-image {
+        order: 1;
+    }
+
+    .industry-split-reverse .industry-text {
+        order: 2;
+    }
+
+    /* Image responsive */
+    .industry-image {
+        width: 100%;
+        height: 220px;
+        border-radius: 18px;
+    }
+
+    .industry-text {
+        max-width: 100%;
+    }
+
+    .industries-cell {
+        min-height: auto;
+    }
+
+    /* Number badge aligned with image */
+    .mobile-badge {
+        display: flex;
+        position: absolute;
+        left: -10px;
+        /* slightly outside image */
+        top: 16px;
+
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+
+        background: #1db954;
+        color: #ffffff;
+
+        align-items: center;
+        justify-content: center;
+
+        font-family: "Poppins", sans-serif;
+        font-size: 12px;
+        font-weight: 700;
+
+        box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+        z-index: 5;
+    }
+
+}

@@ -1,0 +1,315 @@
+/* =========================
+   CONTACT SECTION
+   ========================= */
+.contact {
+    width: 100%;
+    background: #ffffff;
+    padding: 90px 0;
+}
+
+.contact-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+/* Label row */
+.contact-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 18px;
+}
+
+.contact-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #1db954;
+}
+
+.contact-label-text {
+    font-family: "Poppins", sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #1db954;
+}
+
+/* Title */
+.contact-title {
+    font-family: "Poppins", sans-serif;
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 1.35;
+    color: #1a202c;
+    margin: 0 auto 55px;
+}
+
+/* =========================
+   GRID LAYOUT
+   ========================= */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 0.9fr 1fr;
+    /* both columns slimmer */
+    gap: 240px;
+    /* BIGGER gap */
+    align-items: stretch;
+}
+
+
+/* =========================
+   LEFT BLACK CARD
+   ========================= */
+.contact-card {
+    position: relative;
+    background: #000000;
+    color: #ffffff;
+    border-radius: 14px;
+
+    /* keep enough padding like the screenshot */
+    padding: 34px 30px;
+
+    min-height: 420px;
+    text-align: left;
+    overflow: hidden;
+    box-shadow: 0 10px 22px rgba(0, 0, 0, 0.12);
+
+    /* ✅ Make layout controllable */
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.contact-card-title {
+    font-family: "Poppins", sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0 0 6px;
+}
+
+.contact-card-subtitle {
+    font-family: "Poppins", sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.75);
+    margin: 0 0 28px;
+}
+
+.contact-card-list {
+    display: flex;
+    flex-direction: column;
+
+    /* ✅ Bigger spacing between phone/email/location */
+    gap: 34px;
+
+    /* ✅ Center this info block vertically in the card */
+    margin-top: auto;
+    margin-bottom: auto;
+
+    /* keep it above socials */
+    padding-bottom: 90px;
+}
+
+.contact-card-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.contact-card-icon {
+    font-size: 14px;
+    margin-top: 3px;
+    color: #ffffff;
+    flex-shrink: 0;
+}
+
+.contact-card-text {
+    font-family: "Poppins", sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.92);
+    line-height: 1.6;
+}
+
+/* Social icons */
+.contact-socials {
+    position: absolute;
+    left: 30px;
+    bottom: 22px;
+    display: flex;
+    gap: 12px;
+    z-index: 3;
+}
+
+.social-btn {
+    width: 30px;
+    height: 30px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.12);
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 14px;
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.social-btn:hover {
+    transform: translateY(-2px);
+    background: rgba(255, 255, 255, 0.18);
+}
+
+/* Instagram highlight green like screenshot */
+.social-ig {
+    background: #1db954;
+    color: #ffffff;
+}
+
+.social-ig:hover {
+    background: #18a74a;
+}
+
+/* Decorative circles */
+.contact-deco {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(29, 185, 84, 0.35);
+    z-index: 1;
+}
+
+.contact-deco-1 {
+    width: 88px;
+    height: 88px;
+    right: 78px;
+    bottom: 42px;
+}
+
+.contact-deco-2 {
+    width: 150px;
+    height: 150px;
+    right: -40px;
+    bottom: -40px;
+    background: rgba(0, 120, 60, 0.45);
+}
+
+/* =========================
+   RIGHT FORM
+   ========================= */
+.contact-form {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+/* Each field */
+.field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.field-label {
+    font-family: "Poppins", sans-serif;
+    font-size: 10px;
+    font-weight: 500;
+    color: rgba(26, 32, 44, 0.7);
+}
+
+.req {
+    color: #1db954;
+    font-weight: 700;
+}
+
+/* Inputs (gray frame; focus turns green) */
+.field-input {
+    width: 100%;
+    border-radius: 7px;
+    border: 1px solid rgba(26, 32, 44, 0.25);
+    background: #ffffff;
+    padding: 10px 12px;
+
+    font-family: "Poppins", sans-serif;
+    font-size: 12px;
+    color: #1a202c;
+
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Green focus state (border + subtle glow) */
+.field-input:focus {
+    border-color: #1db954;
+    box-shadow: 0 0 0 3px rgba(29, 185, 84, 0.18);
+}
+
+.field-textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+/* Submit button */
+.contact-submit {
+    margin-top: 8px;
+    width: 100%;
+    border: none;
+    border-radius: 8px;
+
+    background: #1db954;
+    color: #ffffff;
+
+    padding: 12px 18px;
+    font-family: "Poppins", sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    cursor: pointer;
+    transition: background 0.25s ease, transform 0.2s ease;
+}
+
+/* Hover: dark green */
+.contact-submit:hover {
+    background: #148a3f;
+    transform: translateY(-5px);
+}
+
+.contact-submit-icon {
+    font-size: 14px;
+}
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+@media (max-width: 960px) {
+    .contact-title {
+        font-size: 24px;
+        margin-bottom: 35px;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 28px;
+        column-gap: 28px;
+    }
+
+    .contact-card {
+        min-height: 360px;
+    }
+
+    /* On mobile, keep the info readable (not too much vertical spacing) */
+    .contact-card-list {
+        gap: 22px;
+        padding-bottom: 70px;
+    }
+}

@@ -1,0 +1,215 @@
+/* =========================
+   TESTIMONIALS SECTION
+   ========================= */
+.testimonials {
+    width: 100%;
+    background: #ffffff;
+    padding: 90px 0;
+}
+
+.testimonials-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+/* Label row */
+.testimonials-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 18px;
+}
+
+.testimonials-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #1db954;
+}
+
+.testimonials-label-text {
+    font-family: "Poppins", sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #1db954;
+}
+
+/* Title */
+.testimonials-title {
+    font-family: "Poppins", sans-serif;
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 1.35;
+    color: #1a202c;
+    margin: 0 auto 55px;
+}
+
+/* =========================
+   GRID + CARD
+   ========================= */
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 28px;
+    align-items: stretch;
+}
+
+.testimonial-card {
+    background: #ffffff;
+    border-radius: 24px;
+    padding: 26px 26px 20px;
+    text-align: left;
+
+    /* subtle border like screenshot */
+    border: 1px solid rgba(26, 32, 44, 0.25);
+
+    /* soft shadow so it feels like a floating card */
+    box-shadow: 0 10px 22px rgba(0, 0, 0, 0.06);
+
+    /* keep footer at bottom */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 260px;
+}
+
+/* Stars */
+.testimonial-stars {
+    display: flex;
+    gap: 6px;
+    margin-bottom: 14px;
+}
+
+.testimonial-stars .star {
+    color: #1db954;
+    font-size: 16px;
+}
+
+/* Text */
+.testimonial-text {
+    font-family: "Poppins", sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    color: rgba(26, 32, 44, 0.8);
+    line-height: 1.7;
+    margin: 0 0 22px;
+}
+
+/* Footer */
+.testimonial-footer {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.testimonial-avatar {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: rgba(29, 185, 84, 0.08);
+    color: rgba(26, 32, 44, 0.65);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 22px;
+}
+
+/* Name + role */
+.testimonial-name {
+    font-family: "Poppins", sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    color: #1a202c;
+    margin: 0;
+}
+
+.testimonial-role {
+    font-family: "Poppins", sans-serif;
+    font-size: 11px;
+    font-weight: 400;
+    color: rgba(26, 32, 44, 0.65);
+    margin-top: 2px;
+}
+
+/* =========================
+   FILTERS
+   ========================= */
+.testimonials-filters {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: -30px auto 40px; /* pulls it a bit closer to title */
+    padding: 10px 12px;
+
+    /* makes the group look intentional */
+    width: fit-content;
+    max-width: 100%;
+    background: rgba(26, 32, 44, 0.03);
+    border: 1px solid rgba(26, 32, 44, 0.10);
+    border-radius: 999px;
+}
+
+.filter-btn {
+    appearance: none;
+    border: 1px solid rgba(26, 32, 44, 0.12);
+    background: #ffffff;
+    color: rgba(26, 32, 44, 0.80);
+
+    font-family: "Poppins", sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+
+    padding: 10px 14px;
+    border-radius: 999px;
+
+    cursor: pointer;
+    transition: transform 120ms ease, background 120ms ease, border-color 120ms ease, color 120ms ease;
+}
+
+.filter-btn:hover {
+    transform: translateY(-1px);
+    border-color: rgba(29, 185, 84, 0.35);
+}
+
+.filter-btn:active {
+    transform: translateY(0px);
+}
+
+.filter-btn.active {
+    background: #1db954;
+    border-color: #1db954;
+    color: #ffffff;
+}
+
+/* Focus state (keyboard accessibility) */
+.filter-btn:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(29, 185, 84, 0.18);
+}
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+@media (max-width: 960px) {
+    .testimonials-title {
+        font-size: 24px;
+        margin-bottom: 35px;
+    }
+
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .testimonial-card {
+        border-radius: 20px;
+        min-height: auto;
+    }
+}

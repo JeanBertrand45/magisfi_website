@@ -1,0 +1,162 @@
+.navbar {
+    width: 100%;
+    height: 70px;
+    background-color: var(--bg-white);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+/* Main navbar container (logo stays left, menu/button area uses remaining space) */
+.navbar-container {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+
+    /* IMPORTANT: Allows us to absolutely center links inside this container */
+    position: relative;
+}
+
+/* Logo container (left side) */
+.navbar-logo {
+    display: flex;
+    align-items: center;
+}
+
+/* Logo image styling (moved from inline styles into CSS) */
+.navbar-logo-img {
+    height: 60px;
+    width: auto;
+    display: block;
+}
+
+/* Hamburger icon (hidden on desktop, visible on mobile) */
+.menu-icon {
+    display: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: var(--text-black);
+}
+
+/* Desktop nav-menu:
+   - Takes full remaining width after the logo
+   - Keeps the button aligned to the right
+*/
+.nav-menu {
+    flex: 1;
+    /* IMPORTANT: gives this area the remaining space after the logo */
+    display: flex;
+    align-items: center;
+}
+
+/* TRUE CENTERING for desktop links:
+   We center the whole <ul> in the navbar container using absolute positioning.
+   This keeps links centered even if the logo or button widths change.
+*/
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+
+    /* Center it relative to the navbar-container */
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Link styling */
+.nav-link {
+    color: var(--text-black);
+    font-weight: 500;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+    text-decoration: none;
+}
+
+.nav-link:hover {
+    color: var(--primary-green);
+}
+
+/* Button container stays at the far right */
+.nav-btn-container {
+    margin-left: auto;
+    /* Push button to the far right */
+}
+
+/* Get in touch button */
+.get-touch-btn {
+    padding: 10px 24px;
+    border: none;
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    /* Grayed out default */
+    background-color: #cccccc;
+    color: var(--text-black);
+}
+
+/* Green hover */
+.get-touch-btn:hover {
+    background-color: var(--primary-green);
+    color: var(--bg-white);
+}
+
+/* =========================
+   Responsive (Mobile)
+   ========================= */
+@media screen and (max-width: 960px) {
+
+    /* Show hamburger icon on mobile */
+    .menu-icon {
+        display: block;
+        margin-left: auto;
+        /* keeps the icon on the right */
+    }
+
+    /* Mobile menu becomes a full screen overlay below the navbar */
+    .nav-menu {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100vh;
+        /* Full screen height */
+        position: absolute;
+        top: 80px;
+        /* Below navbar */
+        left: -100%;
+        background-color: var(--bg-white);
+        transition: all 0.5s ease;
+        padding-top: 20px;
+        align-items: center;
+        border-top: 1px solid var(--section-divider);
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    /* On mobile, links should NOT be absolute centered (we want normal stacked layout) */
+    .nav-links {
+        position: static;
+        /* remove absolute positioning */
+        transform: none;
+        left: auto;
+
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .nav-btn-container {
+        margin-top: 20px;
+        margin-left: 0;
+        /* reset */
+    }
+}

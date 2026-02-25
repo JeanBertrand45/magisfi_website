@@ -1,0 +1,146 @@
+/* =========================
+   FULL HERO BACKGROUND
+   ========================= */
+.hero-full {
+    width: 100%;
+    height: 90vh;
+    /* full screen */
+    min-height: 92vh;
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    overflow: hidden;
+}
+
+
+/* =========================
+   BOTTOM BLACK → TRANSPARENT GRADIENT
+   ========================= */
+.hero-gradient {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top,
+            rgba(0, 0, 0, 0.85) 0%,
+            rgba(0, 0, 0, 0.55) 30%,
+            rgba(0, 0, 0, 0.2) 55%,
+            rgba(0, 0, 0, 0) 75%);
+    z-index: 1;
+}
+
+/* =========================
+   HERO CONTENT (BOTTOM CENTER)
+   ========================= */
+.hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+
+    max-width: 900px;
+    padding: 0 20px;
+
+    font-family: "Poppins", sans-serif;
+}
+
+/* Push content slightly up from the very bottom */
+.hero-content-bottom {
+    margin-bottom: 80px;
+    /* adjust to move text higher/lower */
+}
+
+/* =========================
+   TEXT STYLES
+   ========================= */
+.hero-title-full {
+    font-size: 50px;
+    font-weight: 600;
+    line-height: 1.2;
+    color: #ffffff;
+    margin-bottom: 14px;
+}
+
+.hero-subtitle-full {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.9);
+
+    max-width: 720px;
+    margin: 0 auto 26px;
+}
+
+/* =========================
+   BUTTONS
+   ========================= */
+.hero-buttons-full {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.hero-btn-full {
+    height: 48px;
+    padding: 0 24px;
+    border-radius: 10px;
+
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: all 0.25s ease;
+}
+
+/* Primary button */
+.hero-btn-primary-full {
+    background-color: #000;
+    color: #fff;
+}
+
+.hero-btn-primary-full:hover {
+    background-color: #1db954;
+    color: #fff;
+}
+
+/* Secondary button */
+.hero-btn-secondary-full {
+    background-color: #cccccc;
+    color: #000;
+}
+
+.hero-btn-secondary-full:hover {
+    background-color: #1db954;
+    color: #fff;
+}
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+@media (max-width: 960px) {
+    .hero-title-full {
+        font-size: 32px;
+    }
+
+    .hero-subtitle-full {
+        font-size: 15px;
+    }
+
+    .hero-content-bottom {
+        margin-bottom: 60px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-title-full {
+        font-size: 26px;
+    }
+}

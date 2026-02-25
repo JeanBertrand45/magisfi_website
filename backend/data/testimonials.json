@@ -1,0 +1,48 @@
+[
+  {
+    "id": "T1",
+    "stars": 5,
+    "text": "Magis Fi helped us improve our sales operations and customer follow-up with a clear digital workflow. Within a few months, our team became more organized, our reporting improved, and we started seeing measurable growth. Their approach is practical, local, and results-driven.",
+    "name": "Jean Clade Kimenyi",
+    "role": "Sales Operations Supervisor",
+    "company": "Mahwi Grain Millers"
+  },
+
+  {
+    "id": "T2",
+    "stars": 5,
+    "text": "Magis Fi streamlined our HR and administrative processes, especially payroll tracking and staff documentation. What used to take days now takes hours. Their support is responsive, and the solutions they recommend are easy for teams to adopt.",
+    "name": "Aisha Rahman",
+    "role": "HR & Administration Manager",
+    "company": "Inyange Industries"
+  },
+
+  {
+    "id": "T3",
+    "stars": 5,
+    "text": "Working with Magis Fi on our digital strategy helped us clarify our brand message and improve customer engagement. Their marketing and analytics guidance gave us better visibility on what works, and the results have been consistent. Professional, reliable, and efficient.",
+    "name": "Grace Uwase",
+    "role": "Business Development Lead",
+    "company": "SONARWA Life Insurance"
+  },
+
+  {
+    "id": "T4",
+    "stars": 5,
+    "text": "Magis Fi supported us in improving reporting and internal follow-ups across teams. The process became clearer, and decision-making became faster because key information was more accessible and well structured.",
+    "name": "Eric Ndayishimiye",
+    "role": "Operations Coordinator",
+    "company": "Mahwi Grain Millers"
+  },
+
+
+  
+  {
+    "id": "T5",
+    "stars": 5,
+    "text": "Their team helped us align our customer communication and service processes with digital tools that are easy to maintain. The results are more consistency, better tracking, and improved response time.",
+    "name": "Diane Mukamana",
+    "role": "Customer Experience Officer",
+    "company": "Inyange Industries"
+  }
+]

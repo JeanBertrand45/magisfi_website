@@ -1,0 +1,137 @@
+/* =========================
+   SERVICES SECTION
+   ========================= */
+.services {
+    width: 100%;
+    background-color: #f5f5f5;
+    /* light gray like screenshot */
+    padding: 90px 0;
+}
+
+.services-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+/* Label row: green dot + text */
+.services-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 18px;
+}
+
+.services-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #1db954;
+}
+
+.services-label-text {
+    font-family: "Poppins", sans-serif;
+    font-size: 12px;
+    /* as requested */
+    font-weight: 800;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #1db954;
+}
+
+/* Title: Poppins 30px */
+.services-title {
+    font-family: "Poppins", sans-serif;
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 1.35;
+    color: #1a202c;
+    max-width: 700px;
+    margin: 0 auto 56px;
+    /* centers + adds consistent spacing */
+    text-align: center;
+}
+
+/* Grid layout for the 4 service cards */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 30px;
+    justify-items: center;
+}
+
+/* Card styling */
+.service-card {
+    width: 100%;
+    max-width: 400px;
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 30px;
+    text-align: left;
+
+    border: 1px solid rgba(26, 32, 44, 0.08);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.06);
+
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* Subtle hover lift like modern templates */
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* Icon container */
+.service-icon {
+    width: 34px;
+    height: 34px;
+    border-radius: 6px;
+
+    background: rgba(26, 32, 44, 0.06);
+    color: #1a202c;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 16px;
+    margin-bottom: 14px;
+}
+
+/* Card title */
+.service-card-title {
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: #1a202c;
+    margin: 0 0 10px;
+}
+
+/* Card description */
+.service-card-desc {
+    font-family: "Poppins", sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    color: rgba(26, 32, 44, 0.75);
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+@media (max-width: 960px) {
+    .services-title {
+        font-size: 24px;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+        /* stack cards on small screens */
+    }
+
+    .service-card {
+        max-width: 520px;
+    }
+}

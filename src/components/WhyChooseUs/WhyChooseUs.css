@@ -1,0 +1,171 @@
+/* =========================
+   WHY SECTION BASE
+   ========================= */
+.why {
+    width: 100%;
+    background-color: #ffffff;
+    padding: 80px 0;
+}
+
+.why-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+}
+
+/* Label with green dot */
+.why-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 16px;
+}
+
+.why-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #1db954;
+}
+
+.why-label-text {
+    font-family: "Poppins", sans-serif;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 0.2em;
+    color: #1db954;
+    text-transform: uppercase;
+}
+
+/* Big title */
+.why-title {
+    font-size: 30px;
+    font-weight: 600;
+    color: #1a202c;
+    line-height: 1.25;
+    margin: 0 0 40px;
+}
+
+/* ===============
+   BIG FRAME 
+   ======== */
+
+.why-frame {
+    border-radius: 28px;
+
+    /* Tight spacing between outer frame and inner panel */
+    padding: 10px;
+
+    /* Slightly softer gradient (closer to template feel) */
+    background: linear-gradient(135deg,
+            rgba(29, 185, 84, 0.08),
+            rgba(255, 255, 255, 1));
+
+    /* Subtle gray border (a touch stronger but still "barely noticeable") */
+    border: 1px solid rgba(26, 32, 44, 0.10);
+
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 24px;
+
+    text-align: left;
+
+    /* IMPORTANT: keeps both columns visually aligned in height */
+    align-items: stretch;
+}
+
+/* =========================
+   INNER WHITE PANEL (contains ONLY 2 notes)
+   ========================= */
+.why-inner-panel {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 22px;
+
+    box-shadow: 0 10px 22px rgba(0, 0, 0, 0.10);
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* =========================
+   RIGHT NOTES (aligned to match left rows)
+   ========================= */
+.why-right-notes {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    /* 2 equal rows -> aligns top and bottom notes */
+    gap: 22px;
+
+    /* Match left panel top padding so top headings align */
+    padding: 22px 10px;
+}
+
+.why-right-top,
+.why-right-bottom {
+    display: flex;
+    align-items: flex-start;
+}
+
+/* ==========
+   ITEM STYLES
+   ============== */
+
+.why-item {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+}
+
+/* Icons are plain green (no circle) */
+.why-icon {
+    font-size: 18px;
+    color: #1db954;
+    margin-top: 4px;
+    flex-shrink: 0;
+}
+
+.why-item-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #1a202c;
+    margin: 0 0 6px;
+}
+
+/* Description: lighter gray like the template + Poppins for better UI readability */
+.why-item-desc {
+    font-family: "Poppins", sans-serif;
+    /* body font */
+    font-size: 12px;
+    font-weight: 400;
+    color: rgba(26, 32, 44, 0.75);
+    /* lighter gray */
+    line-height: 1.6;
+    margin: 0;
+    max-width: 420px;
+}
+
+/* =========================
+   RESPONSIVE
+   ============= */
+
+@media (max-width: 960px) {
+    .why-title {
+        font-size: 28px;
+    }
+
+    .why-frame {
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+
+    .why-right-notes {
+        padding: 0;
+        grid-template-rows: auto;
+    }
+}

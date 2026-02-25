@@ -1,0 +1,47 @@
+html {
+  scroll-behavior: smooth;
+  height: 100%;
+}
+
+:root {
+  --primary-green: #1DB954;
+  --section-divider: #F5F5F5;
+  --text-black: #000000;
+  --bg-white: #FFFFFF;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+body {
+  height: 100%;
+  margin: 0;
+  /* prevents unexpected whitespace */
+  font-family: "Poppins", sans-serif;
+  background-color: var(--bg-white);
+  color: var(--text-black);
+  line-height: 1.5;
+}
+
+/*  Allow app to fill screen and push footer correctly */
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+}

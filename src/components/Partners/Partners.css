@@ -1,0 +1,64 @@
+/* =========================
+   PARTNERS SECTION
+   ========================= */
+.partners {
+    width: 100%;
+    background-color: #ffffff;
+    padding: 60px 0 30px;
+}
+
+/* Center content like Hero/Navbar */
+.partners-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+/* Title: Montserrat, Medium, 20px */
+.partners-title {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    /* Medium */
+    font-size: 16px;
+    color: #1a202c;
+    margin-bottom: 30px;
+}
+
+/* Logos row */
+.partners-logos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 200px;
+    flex-wrap: wrap;
+}
+
+/* Partner logo styling */
+.partner-logo {
+    max-height: 90px;
+    /* keeps logos consistent */
+    width: auto;
+    object-fit: contain;
+
+
+}
+
+/* Hover effect: restore original image */
+.partner-logo:hover {
+    filter: grayscale(0%);
+    opacity: 1;
+    transform: translateY(-5px);
+    /* subtle premium lift */
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .partners-logos {
+        gap: 30px;
+    }
+
+    .partner-logo {
+        max-height: 45px;
+    }
+}
