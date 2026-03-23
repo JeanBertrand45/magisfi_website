@@ -44,34 +44,56 @@ git clone https://github.com/JeanBertrand45/magisfi_website.git
 cd magisfi_website
 ```
 
-### 2. Install Dependencies
+### 2. Install Frontend Dependencies
 
 ```bash
-# Install frontend dependencies
-cd client
-npm install
-
-# Install backend dependencies
-cd ../server
 npm install
 ```
 
-### 3. Run the Application
-
-Run both servers in separate terminals:
+### 3. Install Backend Dependencies
 
 ```bash
-# Start backend server
-cd server
-npm start
+cd backend
+npm install
 ```
 
+### 4. Run the Application
+
+Open **two separate terminals**:
+
+**Terminal 1 - Start Backend Server:**
 ```bash
-# Start frontend application
-cd ../client
+cd backend
 npm start
+npm run dev
 ```
+
+**Terminal 2 - Start Frontend Application:**
+```bash
+npm start
+npm run dev
+```
+
+The React app will open at `http://localhost:5173` and the backend will run at `http://localhost:8000`.
 
 ---
 
+## 📂 Project Structure
+
+```
+magisfi_website/
+├── backend/
+│   ├── server.js
+│   ├── package.json
+│   ├── .env
+│   └── data/
+├── src/
+│   ├── App.jsx
+│   ├── main.jsx
+│   ├── components/
+│   └── assets/
+├── public/
+├── package.json
+└── README.md
+```
 
