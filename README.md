@@ -1,65 +1,77 @@
 # Magis Fi Web Application
 
-This project is a full-stack web application developed for the *Project: Java and Web Development* course.
+A full-stack web application developed for the **Project: Java and Web Development** course.
 
-It includes a React frontend and a Node.js/Express backend with REST API integration.
+This project combines a **React frontend** with a **Node.js/Express backend**, featuring REST API integration and practical functionalities for a financial services website.
 
 ---
 
 ## 🚀 Features
 
-- Testimonials with server-side filtering  
-- Consultation booking with data persistence  
-- Contact form with email integration (Nodemailer)  
-- Responsive design (mobile and desktop)  
+- 💬 **Testimonials System**  
+  Server-side filtering for dynamic testimonial display  
+
+- 📅 **Consultation Booking**  
+  Persistent data storage for scheduled consultations  
+
+- 📧 **Contact Form**  
+  Email integration using Nodemailer  
+
+- 📱 **Responsive Design**  
+  Optimized for both mobile and desktop devices  
 
 ---
 
-## 🛠 Tech Stack
+## 🛠️ Tech Stack
 
-- Frontend: React  
-- Backend: Node.js, Express  
-- Data Storage: JSON files  
-- Email Service: Nodemailer  
+| Layer       | Technology            |
+|------------|---------------------|
+| Frontend   | React               |
+| Backend    | Node.js, Express    |
+| Data       | JSON file storage   |
+| Email      | Nodemailer          |
 
 ---
 
 ## 📦 Installation & Setup
 
-### 1. Clone the repository
+Follow these steps to run the project locally:
+
+### 1. Clone the Repository
 
 ```bash
-git clone <https://github.com/JeanBertrand45/magisfi_website>
-cd magis-fi
+git clone https://github.com/JeanBertrand45/magisfi_website.git
+cd magisfi_website
+```
 
-### 2. Install dependencies
+### 2. Install Dependencies
 
-Frontend
 ```bash
+# Install frontend dependencies
 cd client
 npm install
 
-Backend
-```bash
+# Install backend dependencies
 cd ../server
 npm install
+```
 
-### 3. Run application
+### 3. Run the Application
 
-Start Backend
+Run both servers in separate terminals:
+
 ```bash
-cd client
-npm install
+# Start backend server
+cd server
+npm start
+```
 
-Start Frontend
 ```bash
+# Start frontend application
 cd ../client
-npm install
+npm start
+```
 
-
-
-
-
-
+---
 
 
