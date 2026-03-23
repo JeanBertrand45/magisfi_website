@@ -32,3 +32,34 @@ It includes a React frontend and a Node.js/Express backend with REST API integra
 git clone <https://github.com/JeanBertrand45/magisfi_website>
 cd magis-fi
 
+### 2. Install dependencies
+
+Frontend
+```bash
+cd client
+npm install
+
+Backend
+```bash
+cd ../server
+npm install
+
+### 3. Run application
+
+Start Backend
+```bash
+cd client
+npm install
+
+Start Frontend
+```bash
+cd ../client
+npm install
+
+
+
+
+
+
+
+
